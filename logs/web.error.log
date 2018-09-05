@@ -1,0 +1,338 @@
+[2017-10-10 14:29:38 +0000] [18301] [INFO] Starting gunicorn 19.7.1
+[2017-10-10 14:29:38 +0000] [18301] [INFO] Listening at: http://127.0.0.1:8000 (18301)
+[2017-10-10 14:29:39 +0000] [18301] [INFO] Using worker: sync
+[2017-10-10 14:29:39 +0000] [18443] [INFO] Booting worker with pid: 18443
+[2017-10-10 14:32:13 +0000] [18301] [INFO] Handling signal: term
+[2017-10-10 14:32:13 +0000] [18443] [INFO] Worker exiting (pid: 18443)
+[2017-10-10 14:32:14 +0000] [18301] [INFO] Shutting down: Master
+[2018-08-29 23:43:29 +0000] [1616] [INFO] Starting gunicorn 19.7.1
+[2018-08-29 23:43:29 +0000] [1616] [INFO] Listening at: http://127.0.0.1:8000 (1616)
+[2018-08-29 23:43:29 +0000] [1616] [INFO] Using worker: sync
+[2018-08-29 23:43:29 +0000] [1735] [INFO] Booting worker with pid: 1735
+[2018-08-30 00:20:16 +0000] [1616] [INFO] Handling signal: term
+[2018-08-30 00:20:17 +0000] [1735] [INFO] Worker exiting (pid: 1735)
+[2018-08-30 00:20:20 +0000] [1616] [INFO] Shutting down: Master
+[2018-08-30 00:20:34 +0000] [2429] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 00:20:34 +0000] [2429] [INFO] Listening at: http://127.0.0.1:8000 (2429)
+[2018-08-30 00:20:34 +0000] [2429] [INFO] Using worker: sync
+[2018-08-30 00:20:34 +0000] [2477] [INFO] Booting worker with pid: 2477
+[2018-08-30 00:56:23 +0000] [2429] [INFO] Handling signal: term
+[2018-08-30 00:56:23 +0000] [2477] [INFO] Worker exiting (pid: 2477)
+[2018-08-30 00:56:23 +0000] [2429] [INFO] Shutting down: Master
+[2018-08-30 00:57:48 +0000] [1502] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 00:57:48 +0000] [1502] [INFO] Listening at: http://127.0.0.1:8000 (1502)
+[2018-08-30 00:57:48 +0000] [1502] [INFO] Using worker: sync
+[2018-08-30 00:57:48 +0000] [1651] [INFO] Booting worker with pid: 1651
+[2018-08-30 01:34:19 +0000] [1614] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 01:34:19 +0000] [1614] [INFO] Listening at: http://127.0.0.1:8000 (1614)
+[2018-08-30 01:34:19 +0000] [1614] [INFO] Using worker: sync
+[2018-08-30 01:34:19 +0000] [1745] [INFO] Booting worker with pid: 1745
+[2018-08-30 01:34:22 +0000] [1745] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/local.py", line 228, in application
+    return ClosingIterator(app(environ, start_response), self.cleanup)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/wrappers.py", line 301, in application
+    return f(*args[:-2] + (request,))(*args[-2:])
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 88, in application
+    response = handle_exception(e)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 191, in handle_exception
+    http_status_code=http_status_code)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 72, in render
+    data = render_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 149, in render_page
+    return build(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 156, in build
+    return build_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 169, in build_page
+    context = get_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/context.py", line 15, in get_context
+    context = get_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 35, in get_page_context
+    page_context = make_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 43, in make_page_context
+    context = resolve_route(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 18, in resolve_route
+    context = get_page_info_from_template(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 59, in get_page_info_from_template
+    app_path = frappe.get_app_path(app)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 727, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 742, in get_pymodule_path
+    return os.path.join(os.path.dirname(get_module(scrub(modulename)).__file__), *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named business_theme
+[2018-08-30 01:34:22 +0000] [1745] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/local.py", line 228, in application
+    return ClosingIterator(app(environ, start_response), self.cleanup)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/wrappers.py", line 301, in application
+    return f(*args[:-2] + (request,))(*args[-2:])
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 88, in application
+    response = handle_exception(e)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 191, in handle_exception
+    http_status_code=http_status_code)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 72, in render
+    data = render_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 149, in render_page
+    return build(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 156, in build
+    return build_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 169, in build_page
+    context = get_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/context.py", line 15, in get_context
+    context = get_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 35, in get_page_context
+    page_context = make_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 43, in make_page_context
+    context = resolve_route(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 18, in resolve_route
+    context = get_page_info_from_template(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 59, in get_page_info_from_template
+    app_path = frappe.get_app_path(app)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 727, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 742, in get_pymodule_path
+    return os.path.join(os.path.dirname(get_module(scrub(modulename)).__file__), *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named business_theme
+[2018-08-30 01:34:22 +0000] [1745] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/local.py", line 228, in application
+    return ClosingIterator(app(environ, start_response), self.cleanup)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/wrappers.py", line 301, in application
+    return f(*args[:-2] + (request,))(*args[-2:])
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 88, in application
+    response = handle_exception(e)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 191, in handle_exception
+    http_status_code=http_status_code)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 72, in render
+    data = render_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 149, in render_page
+    return build(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 156, in build
+    return build_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 169, in build_page
+    context = get_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/context.py", line 15, in get_context
+    context = get_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 35, in get_page_context
+    page_context = make_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 43, in make_page_context
+    context = resolve_route(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 18, in resolve_route
+    context = get_page_info_from_template(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 59, in get_page_info_from_template
+    app_path = frappe.get_app_path(app)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 727, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 742, in get_pymodule_path
+    return os.path.join(os.path.dirname(get_module(scrub(modulename)).__file__), *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named business_theme
+[2018-08-30 01:34:22 +0000] [1745] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/local.py", line 228, in application
+    return ClosingIterator(app(environ, start_response), self.cleanup)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/wrappers.py", line 301, in application
+    return f(*args[:-2] + (request,))(*args[-2:])
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 88, in application
+    response = handle_exception(e)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 191, in handle_exception
+    http_status_code=http_status_code)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 72, in render
+    data = render_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 149, in render_page
+    return build(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 156, in build
+    return build_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 169, in build_page
+    context = get_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/context.py", line 15, in get_context
+    context = get_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 35, in get_page_context
+    page_context = make_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 43, in make_page_context
+    context = resolve_route(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 18, in resolve_route
+    context = get_page_info_from_template(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 59, in get_page_info_from_template
+    app_path = frappe.get_app_path(app)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 727, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 742, in get_pymodule_path
+    return os.path.join(os.path.dirname(get_module(scrub(modulename)).__file__), *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named business_theme
+[2018-08-30 01:34:22 +0000] [1745] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/local.py", line 228, in application
+    return ClosingIterator(app(environ, start_response), self.cleanup)
+  File "/home/frappe/frappe-bench/env/local/lib/python2.7/site-packages/werkzeug/wrappers.py", line 301, in application
+    return f(*args[:-2] + (request,))(*args[-2:])
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 88, in application
+    response = handle_exception(e)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/app.py", line 191, in handle_exception
+    http_status_code=http_status_code)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 72, in render
+    data = render_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 149, in render_page
+    return build(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 156, in build
+    return build_page(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/render.py", line 169, in build_page
+    context = get_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/context.py", line 15, in get_context
+    context = get_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 35, in get_page_context
+    page_context = make_page_context(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 43, in make_page_context
+    context = resolve_route(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 18, in resolve_route
+    context = get_page_info_from_template(path)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/website/router.py", line 59, in get_page_info_from_template
+    app_path = frappe.get_app_path(app)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 727, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 742, in get_pymodule_path
+    return os.path.join(os.path.dirname(get_module(scrub(modulename)).__file__), *joins)
+  File "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 704, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named business_theme
+[2018-08-30 01:37:42 +0000] [1626] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 01:37:42 +0000] [1626] [INFO] Listening at: http://127.0.0.1:8000 (1626)
+[2018-08-30 01:37:42 +0000] [1626] [INFO] Using worker: sync
+[2018-08-30 01:37:42 +0000] [1742] [INFO] Booting worker with pid: 1742
+[2018-08-30 07:57:05 +0000] [1626] [INFO] Handling signal: term
+[2018-08-30 07:57:05 +0000] [1742] [INFO] Worker exiting (pid: 1742)
+[2018-08-30 07:57:06 +0000] [1626] [INFO] Shutting down: Master
+[2018-08-30 07:57:19 +0000] [3140] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 07:57:19 +0000] [3140] [INFO] Listening at: http://127.0.0.1:8000 (3140)
+[2018-08-30 07:57:19 +0000] [3140] [INFO] Using worker: sync
+[2018-08-30 07:57:19 +0000] [3178] [INFO] Booting worker with pid: 3178
+[2018-08-30 08:42:29 +0000] [3140] [INFO] Handling signal: term
+[2018-08-30 08:42:29 +0000] [3178] [INFO] Worker exiting (pid: 3178)
+[2018-08-30 08:42:30 +0000] [3140] [INFO] Shutting down: Master
+[2018-08-30 08:42:46 +0000] [3502] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 08:42:46 +0000] [3502] [INFO] Listening at: http://127.0.0.1:8000 (3502)
+[2018-08-30 08:42:46 +0000] [3502] [INFO] Using worker: sync
+[2018-08-30 08:42:46 +0000] [3526] [INFO] Booting worker with pid: 3526
+[2018-08-30 08:46:48 +0000] [3502] [INFO] Handling signal: term
+[2018-08-30 08:46:48 +0000] [3526] [INFO] Worker exiting (pid: 3526)
+[2018-08-30 08:46:49 +0000] [3502] [INFO] Shutting down: Master
+[2018-08-30 08:47:05 +0000] [3798] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 08:47:05 +0000] [3798] [INFO] Listening at: http://127.0.0.1:8000 (3798)
+[2018-08-30 08:47:05 +0000] [3798] [INFO] Using worker: sync
+[2018-08-30 08:47:05 +0000] [3822] [INFO] Booting worker with pid: 3822
+[2018-08-30 08:49:41 +0000] [3798] [INFO] Handling signal: term
+[2018-08-30 08:49:41 +0000] [3822] [INFO] Worker exiting (pid: 3822)
+[2018-08-30 08:49:41 +0000] [3798] [INFO] Shutting down: Master
+[2018-08-30 08:49:54 +0000] [3978] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 08:49:54 +0000] [3978] [INFO] Listening at: http://127.0.0.1:8000 (3978)
+[2018-08-30 08:49:54 +0000] [3978] [INFO] Using worker: sync
+[2018-08-30 08:49:54 +0000] [4018] [INFO] Booting worker with pid: 4018
+[2018-08-30 08:53:17 +0000] [3978] [INFO] Handling signal: term
+[2018-08-30 08:53:17 +0000] [4018] [INFO] Worker exiting (pid: 4018)
+[2018-08-30 08:53:17 +0000] [3978] [INFO] Shutting down: Master
+[2018-08-30 08:53:29 +0000] [4179] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 08:53:29 +0000] [4179] [INFO] Listening at: http://127.0.0.1:8000 (4179)
+[2018-08-30 08:53:29 +0000] [4179] [INFO] Using worker: sync
+[2018-08-30 08:53:29 +0000] [4219] [INFO] Booting worker with pid: 4219
+[2018-08-30 08:58:58 +0000] [4179] [INFO] Handling signal: term
+[2018-08-30 08:58:58 +0000] [4219] [INFO] Worker exiting (pid: 4219)
+[2018-08-30 08:58:58 +0000] [4179] [INFO] Shutting down: Master
+[2018-08-30 08:59:11 +0000] [4416] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 08:59:11 +0000] [4416] [INFO] Listening at: http://127.0.0.1:8000 (4416)
+[2018-08-30 08:59:11 +0000] [4416] [INFO] Using worker: sync
+[2018-08-30 08:59:11 +0000] [4456] [INFO] Booting worker with pid: 4456
+[2018-08-30 09:05:48 +0000] [1544] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 09:05:48 +0000] [1544] [INFO] Listening at: http://127.0.0.1:8000 (1544)
+[2018-08-30 09:05:48 +0000] [1544] [INFO] Using worker: sync
+[2018-08-30 09:05:48 +0000] [1725] [INFO] Booting worker with pid: 1725
+[2018-08-30 09:15:07 +0000] [1590] [INFO] Starting gunicorn 19.7.1
+[2018-08-30 09:15:07 +0000] [1590] [INFO] Listening at: http://127.0.0.1:8000 (1590)
+[2018-08-30 09:15:07 +0000] [1590] [INFO] Using worker: sync
+[2018-08-30 09:15:07 +0000] [1690] [INFO] Booting worker with pid: 1690
+[2018-08-30 09:24:16 +0000] [1590] [INFO] Handling signal: term
+[2018-08-30 09:24:16 +0000] [1690] [INFO] Worker exiting (pid: 1690)
+[2018-08-30 09:24:16 +0000] [1590] [INFO] Shutting down: Master
+[2018-08-31 00:09:18 +0000] [1539] [INFO] Starting gunicorn 19.7.1
+[2018-08-31 00:09:18 +0000] [1539] [INFO] Listening at: http://127.0.0.1:8000 (1539)
+[2018-08-31 00:09:18 +0000] [1539] [INFO] Using worker: sync
+[2018-08-31 00:09:18 +0000] [1621] [INFO] Booting worker with pid: 1621
+[2018-09-01 05:33:07 +0000] [1588] [INFO] Starting gunicorn 19.7.1
+[2018-09-01 05:33:07 +0000] [1588] [INFO] Listening at: http://127.0.0.1:8000 (1588)
+[2018-09-01 05:33:07 +0000] [1588] [INFO] Using worker: sync
+[2018-09-01 05:33:07 +0000] [1677] [INFO] Booting worker with pid: 1677
+[2018-09-01 06:14:27 +0000] [1588] [INFO] Handling signal: term
+[2018-09-01 06:14:27 +0000] [1677] [INFO] Worker exiting (pid: 1677)
+[2018-09-01 06:14:27 +0000] [1588] [INFO] Shutting down: Master
+[2018-09-01 06:14:40 +0000] [2125] [INFO] Starting gunicorn 19.7.1
+[2018-09-01 06:14:40 +0000] [2125] [INFO] Listening at: http://127.0.0.1:8000 (2125)
+[2018-09-01 06:14:40 +0000] [2125] [INFO] Using worker: sync
+[2018-09-01 06:14:40 +0000] [2163] [INFO] Booting worker with pid: 2163
+[2018-09-01 06:19:15 +0000] [2125] [INFO] Handling signal: term
+[2018-09-01 06:19:15 +0000] [2163] [INFO] Worker exiting (pid: 2163)
+[2018-09-01 06:19:15 +0000] [2125] [INFO] Shutting down: Master
+[2018-09-01 06:19:28 +0000] [2321] [INFO] Starting gunicorn 19.7.1
+[2018-09-01 06:19:28 +0000] [2321] [INFO] Listening at: http://127.0.0.1:8000 (2321)
+[2018-09-01 06:19:28 +0000] [2321] [INFO] Using worker: sync
+[2018-09-01 06:19:28 +0000] [2361] [INFO] Booting worker with pid: 2361
+[2018-09-01 06:32:01 +0000] [2321] [INFO] Handling signal: term
+[2018-09-01 06:32:01 +0000] [2361] [INFO] Worker exiting (pid: 2361)
+[2018-09-01 06:32:01 +0000] [2321] [INFO] Shutting down: Master
+[2018-09-01 06:32:15 +0000] [2628] [INFO] Starting gunicorn 19.7.1
+[2018-09-01 06:32:15 +0000] [2628] [INFO] Listening at: http://127.0.0.1:8000 (2628)
+[2018-09-01 06:32:15 +0000] [2628] [INFO] Using worker: sync
+[2018-09-01 06:32:15 +0000] [2668] [INFO] Booting worker with pid: 2668
+[2018-09-01 23:39:01 +0000] [1598] [INFO] Starting gunicorn 19.7.1
+[2018-09-01 23:39:01 +0000] [1598] [INFO] Listening at: http://127.0.0.1:8000 (1598)
+[2018-09-01 23:39:01 +0000] [1598] [INFO] Using worker: sync
+[2018-09-01 23:39:01 +0000] [1746] [INFO] Booting worker with pid: 1746
+[2018-09-01 23:50:08 +0000] [1598] [INFO] Handling signal: term
+[2018-09-01 23:50:08 +0000] [1746] [INFO] Worker exiting (pid: 1746)
+[2018-09-01 23:50:08 +0000] [1598] [INFO] Shutting down: Master
+[2018-09-05 00:40:20 +0000] [1470] [INFO] Starting gunicorn 19.7.1
+[2018-09-05 00:40:20 +0000] [1470] [INFO] Listening at: http://127.0.0.1:8000 (1470)
+[2018-09-05 00:40:20 +0000] [1470] [INFO] Using worker: sync
+[2018-09-05 00:40:20 +0000] [1618] [INFO] Booting worker with pid: 1618
+[2018-09-05 00:43:24 +0000] [1470] [INFO] Handling signal: term
+[2018-09-05 00:43:24 +0000] [1618] [INFO] Worker exiting (pid: 1618)
+[2018-09-05 00:43:25 +0000] [1470] [INFO] Shutting down: Master
+[2018-09-05 00:53:31 +0000] [1456] [INFO] Starting gunicorn 19.7.1
+[2018-09-05 00:53:31 +0000] [1456] [INFO] Listening at: http://127.0.0.1:8000 (1456)
+[2018-09-05 00:53:31 +0000] [1456] [INFO] Using worker: sync
+[2018-09-05 00:53:31 +0000] [1583] [INFO] Booting worker with pid: 1583

@@ -1,0 +1,74 @@
+2017-10-10 14:21:25,324 INFO getting app erpnext
+2017-10-10 14:21:25,348 INFO git clone https://github.com/frappe/erpnext --branch master  --origin upstream
+2017-10-10 14:23:55,165 INFO installing erpnext
+2017-10-10 14:23:55,184 INFO ./env/bin/pip install -q  -e ./apps/erpnext --no-cache-dir
+2017-10-10 14:25:16,719 INFO getting app erpnext_demo
+2017-10-10 14:25:16,737 INFO git clone https://github.com/frappe/erpnext_demo --branch master  --origin upstream
+2017-10-10 14:25:19,202 INFO installing erpnext_demo
+2017-10-10 14:25:19,203 INFO ./env/bin/pip install -q  -e ./apps/erpnext_demo --no-cache-dir
+2017-10-10 14:29:09,610 INFO sudo /usr/bin/supervisorctl reread
+2017-10-10 14:29:10,339 INFO sudo /usr/bin/supervisorctl update
+2017-10-10 14:29:11,111 INFO sudo service nginx reload 
+2018-08-29 23:52:51,193 INFO git config --unset-all remote.upstream.fetch
+2018-08-29 23:52:51,254 INFO git config --add remote.upstream.fetch '+refs/heads/*:refs/remotes/upstream/*'
+2018-08-29 23:52:51,258 INFO git fetch upstream 
+2018-08-29 23:52:53,894 INFO git checkout master
+2018-08-29 23:52:55,640 INFO git merge upstream/master
+2018-08-30 00:02:11,593 INFO git config --unset-all remote.upstream.fetch
+2018-08-30 00:02:11,854 INFO git config --add remote.upstream.fetch '+refs/heads/*:refs/remotes/upstream/*'
+2018-08-30 00:02:11,941 INFO git fetch upstream 
+2018-08-30 00:02:15,765 INFO git checkout master
+2018-08-30 00:02:20,297 INFO git merge upstream/master
+2018-08-30 00:02:59,850 INFO ./env/bin/pip install --upgrade pip
+2018-08-30 00:03:34,837 INFO ./env/bin/pip install -q -r /home/frappe/bench-repo/requirements.txt
+2018-08-30 00:04:10,495 INFO ./env/bin/pip install -q -r ./apps/erpnext/requirements.txt
+2018-08-30 00:04:58,936 INFO ./env/bin/pip install -q -r ./apps/erpnext_demo/requirements.txt
+2018-08-30 00:05:01,815 INFO ./env/bin/pip install -q -r ./apps/frappe/requirements.txt
+2018-08-30 00:05:40,237 INFO npm install
+2018-08-30 00:16:36,527 INFO updating bench
+2018-08-30 00:16:36,567 INFO git pull
+2018-08-30 00:16:46,107 INFO npm install yarn
+2018-08-30 00:17:06,429 INFO ./env/bin/pip install Pillow
+2018-08-30 00:17:29,894 INFO pulling frappe
+2018-08-30 00:17:29,900 INFO git pull  upstream master
+2018-08-30 00:17:32,706 INFO find . -name "*.pyc" -delete
+2018-08-30 00:17:32,784 INFO pulling erpnext
+2018-08-30 00:17:32,789 INFO git pull  upstream master
+2018-08-30 00:17:36,956 INFO find . -name "*.pyc" -delete
+2018-08-30 00:17:37,431 INFO pulling erpnext_demo
+2018-08-30 00:17:37,437 INFO git pull  upstream master
+2018-08-30 00:17:39,065 INFO find . -name "*.pyc" -delete
+2018-08-30 00:17:39,088 INFO ./env/bin/pip install --upgrade pip
+2018-08-30 00:17:41,572 INFO ./env/bin/pip install -q -r /home/frappe/bench-repo/requirements.txt
+2018-08-30 00:17:49,526 INFO ./env/bin/pip install -q -r ./apps/erpnext/requirements.txt
+2018-08-30 00:17:51,557 INFO ./env/bin/pip install -q -r ./apps/erpnext_demo/requirements.txt
+2018-08-30 00:17:53,350 INFO ./env/bin/pip install -q -r ./apps/frappe/requirements.txt
+2018-08-30 00:17:55,242 INFO npm install
+2018-08-30 00:20:08,571 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
+2018-08-30 07:53:39,553 INFO getting app bdtheme
+2018-08-30 07:53:39,758 INFO git clone https://github.com/vinhnguyent090/bdtheme.git   --origin upstream
+2018-08-30 07:53:45,995 INFO installing bdtheme
+2018-08-30 07:53:45,996 INFO ./env/bin/pip install -q  -e ./apps/bdtheme --no-cache-dir
+2018-08-30 07:57:00,546 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
+2018-08-30 08:17:27,227 INFO getting app bdtheme
+2018-08-30 08:17:27,430 INFO git clone https://github.com/vinhnguyent090/bdtheme.git   --origin upstream
+2018-08-30 08:17:52,091 INFO installing bdtheme
+2018-08-30 08:17:52,091 INFO ./env/bin/pip install -q  -e ./apps/bdtheme --no-cache-dir
+2018-08-30 08:41:39,173 INFO getting app mautic
+2018-08-30 08:41:39,179 INFO git clone https://github.com/DOKOS-IO/mautic   --origin upstream
+2018-08-30 08:41:42,826 INFO installing mautic
+2018-08-30 08:41:42,827 INFO ./env/bin/pip install -q  -e ./apps/mautic --no-cache-dir
+2018-08-30 08:42:26,182 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
+2018-08-30 08:45:43,367 INFO getting app bdtheme
+2018-08-30 08:45:43,581 INFO git clone https://github.com/vinhnguyent090/bdtheme.git   --origin upstream
+2018-08-30 08:45:53,523 INFO installing bdtheme
+2018-08-30 08:45:53,523 INFO ./env/bin/pip install -q  -e ./apps/bdtheme --no-cache-dir
+2018-08-30 08:46:44,232 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
+2018-08-30 08:49:38,048 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
+2018-08-30 08:53:12,563 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
+2018-08-30 08:56:05,523 INFO getting app ERPNext-UI-Theme
+2018-08-30 08:56:05,704 INFO git clone https://github.com/kylelau93/ERPNext-UI-Theme.git   --origin upstream
+2018-08-30 08:58:54,196 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
+2018-09-01 06:14:23,115 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
+2018-09-01 06:19:11,254 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
+2018-09-01 06:31:57,405 INFO sudo supervisorctl restart frappe-bench-workers: frappe-bench-web:
